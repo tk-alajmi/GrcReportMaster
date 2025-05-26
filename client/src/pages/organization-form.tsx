@@ -175,6 +175,22 @@ export default function OrganizationForm() {
       case 'save':
         handleSave();
         break;
+      case 'load-previous':
+        const savedData = loadFromStorage();
+        if (savedData) {
+          form.reset(savedData);
+          toast({
+            title: "Data Loaded",
+            description: "Previous form data has been restored.",
+          });
+        } else {
+          toast({
+            title: "No Saved Data",
+            description: "No previous form data found.",
+            variant: "destructive",
+          });
+        }
+        break;
       case 'sample-data':
         // Fill with sample data
         form.setValue('organization.name', 'TechCorp Solutions LLC');
@@ -193,6 +209,19 @@ export default function OrganizationForm() {
           title: "Sample Data Loaded",
           description: "Form has been filled with sample data.",
         });
+        break;
+      case 'import-csv':
+        toast({
+          title: "CSV Import",
+          description: "Scroll down to the Data Import section to upload CSV files.",
+        });
+        // Scroll to CSV section
+        setTimeout(() => {
+          const csvSection = document.querySelector('[data-csv-section]');
+          if (csvSection) {
+            csvSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
         break;
       default:
         console.log('Quick action:', action);
