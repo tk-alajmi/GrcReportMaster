@@ -16,43 +16,43 @@ export function Sidebar({ steps, onQuickAction }: SidebarProps) {
   };
 
   return (
-    <aside className="w-80 bg-white dark:bg-slate-800 border-r border-gray-200 dark:border-slate-700 min-h-screen">
+    <aside className="w-80 bg-white border-r border-gray-200 min-h-screen">
       <div className="p-6">
         <ProgressIndicator steps={steps} />
         
-        <div className="border-t dark:border-slate-700 pt-6 mt-8">
-          <h3 className="text-sm font-medium text-gray-900 dark:text-slate-100 mb-4">Quick Actions</h3>
+        <div className="border-t pt-6 mt-8">
+          <h3 className="text-sm font-medium text-gray-900 mb-4">Quick Actions</h3>
           <div className="space-y-2">
             <Button
               variant="ghost"
-              className="w-full justify-start text-sm text-gray-700 dark:text-slate-300 hover:bg-gray-50 dark:hover:bg-slate-700"
+              className="w-full justify-start text-sm text-gray-700 hover:bg-gray-50"
               onClick={() => handleQuickAction('import-csv')}
             >
-              <Upload className="w-4 h-4 mr-2 text-gray-400 dark:text-slate-500" />
+              <Upload className="w-4 h-4 mr-2 text-gray-400" />
               Import CSV Data
             </Button>
             <Button
               variant="ghost"
-              className="w-full justify-start text-sm text-gray-700 dark:text-slate-300 hover:bg-gray-50 dark:hover:bg-slate-700"
+              className="w-full justify-start text-sm text-gray-700 hover:bg-gray-50"
               onClick={() => handleQuickAction('save')}
             >
-              <Save className="w-4 h-4 mr-2 text-gray-400 dark:text-slate-500" />
+              <Save className="w-4 h-4 mr-2 text-gray-400" />
               Save Progress
             </Button>
             <Button
               variant="ghost"
-              className="w-full justify-start text-sm text-gray-700 dark:text-slate-300 hover:bg-gray-50 dark:hover:bg-slate-700"
+              className="w-full justify-start text-sm text-gray-700 hover:bg-gray-50"
               onClick={() => handleQuickAction('load-previous')}
             >
-              <History className="w-4 h-4 mr-2 text-gray-400 dark:text-slate-500" />
+              <History className="w-4 h-4 mr-2 text-gray-400" />
               Load Previous
             </Button>
             <Button
               variant="ghost"
-              className="w-full justify-start text-sm text-gray-700 dark:text-slate-300 hover:bg-gray-50 dark:hover:bg-slate-700"
+              className="w-full justify-start text-sm text-gray-700 hover:bg-gray-50"
               onClick={() => handleQuickAction('sample-data')}
             >
-              <Database className="w-4 h-4 mr-2 text-gray-400 dark:text-slate-500" />
+              <Database className="w-4 h-4 mr-2 text-gray-400" />
               Sample Data
             </Button>
           </div>

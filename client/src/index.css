@@ -54,59 +54,5 @@
 
   body {
     @apply font-sans antialiased bg-background text-foreground;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  }
-  
-  /* Watermark */
-  .watermark {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    font-size: 12px;
-    color: hsl(var(--muted-foreground));
-    opacity: 0.7;
-    pointer-events: none;
-    z-index: 1000;
-    background: hsl(var(--background) / 0.8);
-    padding: 4px 8px;
-    border-radius: 4px;
-    backdrop-filter: blur(4px);
-    border: 1px solid hsl(var(--border));
-  }
-
-  .dark .watermark {
-    background: hsl(var(--card) / 0.8);
-    border-color: hsl(var(--border));
-  }
-}
-
-@layer components {
-  /* Dark theme specific styles */
-  .dark .bg-gray-50 {
-    @apply bg-slate-900;
-  }
-  
-  .dark .bg-white {
-    @apply bg-slate-800;
-  }
-  
-  .dark .border-gray-200 {
-    @apply border-slate-700;
-  }
-  
-  .dark .text-gray-900 {
-    @apply text-slate-100;
-  }
-  
-  .dark .text-gray-600 {
-    @apply text-slate-300;
-  }
-  
-  .dark .text-gray-500 {
-    @apply text-slate-400;
-  }
-  
-  .dark .text-gray-400 {
-    @apply text-slate-500;
   }
 }
